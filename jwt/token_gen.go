@@ -146,13 +146,13 @@ func (t *stdToken) Get(name string) (interface{}, bool) {
 
 func (t *stdToken) Set(name string, value interface{}) error {
 	switch name {
-	case AudienceKey:
-		var acceptor types.StringList
-		if err := acceptor.Accept(value); err != nil {
-			return errors.Wrapf(err, `invalid value for %s key`, AudienceKey)
-		}
-		t.audience = acceptor
-		return nil
+	//case AudienceKey:
+	//	var acceptor types.StringList
+	//	if err := acceptor.Accept(value); err != nil {
+	//		return errors.Wrapf(err, `invalid value for %s key`, AudienceKey)
+	//	}
+	//	t.audience = acceptor
+	//	return nil
 	case ExpirationKey:
 		var acceptor types.NumericDate
 		if err := acceptor.Accept(value); err != nil {
